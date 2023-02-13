@@ -24,10 +24,15 @@ Try Demo
 3. Build and run 'demo' on your device.<br/><br/>
 
 
-
 Including in your project
 --------
-Use Gradle:
+1. Download library file. ( https://stipop.jfrog.io/artifactory/stipop-image-editor/io/stipop/stipop-image-editor/0.0.1-beta.1/stipop-image-editor-0.0.1-beta.1.aar )
+
+2. Create 'libs' directory to 'app' directory.
+
+3. Put this aar file to 'libs' directory you made at process 2.
+
+4. Configure Gradle.
 
 ```gradle
 allprojects {
@@ -37,13 +42,14 @@ allprojects {
 }
 
 dependencies {
-  // like 0.0.1.-beta.1 Please check latest release!
-  implementation 'io.stipop:stipop-image-editor-sdk:{latest_version}'
+  implementation files('libs/stipop-image-editor-0.0.1-beta.1.aar')
   implementation 'com.google.android.material:material:1.4.0' // If you do not use Material Theme, StickerSearchView will not work.
   implementation 'androidx.paging:paging-runtime-ktx:3.1.1'   // If you do not implement this, StickerSearchView will not work.
 }
 ```
 <br/>
+
+
 
 How do I use StipopImageEditor SDK?
 -------------------
